@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.6);
+    letter-spacing: 0.1rem;
+}
+
+a:hover {
+    color: #fff;
+    box-shadow: outset 1px 0 #fff;
+    cursor: pointer;
+}
+
+a.details {
+    color: black;
+    letter-spacing: normal;
+}
+body {
+    height: 100%;
+}
+
+footer, header {
+    text-align: center;
+    background-color:  rgb(104, 1, 1);
+    min-height: 50px;
+    padding: 1% 5%;
+    font-family: 'Red Hat Mono', monospace;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Main */
+.fade-main {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom left, black 20%, transparent);
+    display: flex;
+    justify-content: center;
+}
+
+
+main {
+    height: 100%;
+}
+
+div#items-container {
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+}
+
+div.container-item {
+    width: 200px;
+    height: 400px;
+    text-align: center;
+}
+
+div.container-title {
+    height: 20%;
+}
+
+div.container-img {
+    height: 80%;
+    width: 100%;
+}
+
+div.container-img img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Main Detalhes */
+h1 {
+    text-align: center;
+    padding: 2% 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#detalhes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 2%;
+}
+
+#img-desc {
+    padding: 2% 0;
+    text-align: center;
+}
+.img-capa-details {
+    margin-bottom: 20px;
+}
+#ficha-tecnica {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    height: 50%;
+}
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+td, tr {
+    border: 1px solid black;
+}
+tr:hover {
+    background-color: rgba(104, 1, 1, 0.829);
+}
+#ficha-tecnica span {
+    margin: 0 25px;
+}
+#ficha-tecnica span a.btn-detalhes {
+    padding: 2% 5%;
+    color: black;
+    
+}
+
+a.btn-detalhes.edit {
+   background-color: rgba(104, 1, 1, 0.829)
+    
+    
+}
+
+a.btn-detalhes.delete {
+    background-color: rgba(104, 1, 1, 0.829);
+}
+
+.img-capa-details {
+    height: 400px
+}
+/* --/-- */
+
+
+a#btn-home {
+    background: #32172b;
+    box-shadow: 5px 8px 0.8em -5px black;
+    padding: 1%;
+    max-width: 25%;
+    margin: 0 auto;
+    border-radius: 7px;
+}
+
+a#btn-home:hover {
+    transform: scale(1.1);
+    background-color: black;
+}
+
+ul {
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    height: 10vh;
+    margin-right: 20px;
+}
+
+.icons-contact-footer{
+    height: 30px;
+}
+
+ul#footer {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    justify-content: center;
+    gap: 5%;
+    color: white;
+}
+
+@media screen {
+    
+}

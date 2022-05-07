@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/details.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/2232/2232688.png" type="image/x-icon">
+    <title><%= livros.nome %> </title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+    <main>
+        <h1><%= livros.titulo %> </h1>
+        <div id="detalhes">
+            <div id="img-desc">
+                <img class='img-capa-details' src="<%= livros.img %> " alt="capa livro <%= livros.titulo %> ">
+                <p><%= livros.sinopse %></p>
+            </div>
+            <div id="ficha-tecnica">
+                <table>
+                    <tr>
+                        <td>Titulo</td>
+                        <td><%= livros.titulo %> </td>
+                    </tr>
+                    <tr>
+                        <td>Lançamento</td>
+                        <td><%= livros.ano %></td>
+                    </tr>
+                    <tr>
+                        <td>Autores</td>
+                        <td> <%= livros.autores %>  </td>
+                    </tr>
+                </table>
+                <span><a class="btn-detalhes edit" href="/edit/<%= livros.id %> ">Editar</a></span>
+                <span><a class="btn-detalhes delete" href="/delete/<%= livros.id %> ">Excluir</a></span>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html>

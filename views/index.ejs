@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1164/1164620.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4d42861124.js" crossorigin="anonymous"></script>
+        <title>Massonetto Biblioteca</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+   
+    <main>
+        <div id="items-container">
+            <% livros.forEach(element => { %>
+                <div class="container-item">
+                    <a class="details" href="/details/<%= element.id %> ">
+                        <div class="container-img">
+                            <img src="<%= element.img %> " alt="capa livro <%= element.titulo%>">
+                        </div>
+                        <div class="container-title">
+                            <h3><%= element.titulo %> </h3>
+                        </div>
+                    </a>
+                </div>
+            <% }) %>
+        </div> 
+    </main>
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html>

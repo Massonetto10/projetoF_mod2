@@ -5,9 +5,7 @@ dotenv.config()
 
 export const connection = new Sequelize(
     process.env.DB_URL,
-    // process.env.DB_BASE,
-    // process.env.DB_USER,
-    // process.env.DB_PASS,
+   
     {
         dialect: 'postgres',
         dialectOptions: {

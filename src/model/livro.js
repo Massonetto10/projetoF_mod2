@@ -34,4 +34,13 @@ export const livro = connection.define('livro', {
     updatedAt: false,
     timestamps: false
 })
+const initTable = async () => {
+    try {
+        await livro.sync()
+    }
+    catch(error){
+        return error.message
+    }
+}
 
+initTable()

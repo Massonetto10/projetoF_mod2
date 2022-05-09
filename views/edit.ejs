@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1164/1164620.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/styles.css">
-    <title> Criar </title>
+    <title> Editar </title>
 </head>
 <body>
     <%- include('./partials/header.ejs') %>
@@ -15,35 +16,39 @@
             <form action="/edit/<%= livros.id %>" method="post">
                 <fieldset>
                     <label for="titulo"> Titulo </label>
-                    <input type="text" name="titulo" value="<%= livros.titulo %>" placeholder="<%= livros.titulo %>">
+                    <input type="text" name="titulo" value="<%= livros.titulo %>" placeholder="<%= livros.titulo %>"required>
                 </fieldset>
                 
                 <fieldset>
                     <label for="img"> Capa </label>
-                    <input type="url" name="img" value="<%= livros.img %>">
+                    <input type="url" name="img" value="<%= livros.img %>"required>
                 </fieldset>
                 
                 <fieldset>
                     <label for="ano"> Ano </label>
-                    <input type="text" name="ano" value="<%= livros.ano %> ">
+                    <input type="text" name="ano" value="<%= livros.ano %> "required>
                 </fieldset>
                 
                 <fieldset>
                     <label for="autores"> Autores </label>
-                    <input type="text" name="autores" value="<%= livros.autores %> ">
+                    <input type="text" name="autores" value="<%= livros.autores %> "required>
                 </fieldset>
 
                 <fieldset>
                     <label for="sinopse"> Sinopse </label>
-                    <input type="text" name="sinopse" value=" <%= livros.sinopse %> ">
+                    <input type="text" name="sinopse" value=" <%= livros.sinopse %> "required>
                 </fieldset>
 
                 <div id="btn-container">
                     <button type="submit"> Enviar </button>
                 </div>
             </form>
+           
         </div>
     </main>
+    
     <%- include('./partials/footer.ejs') %>
+    <script src="/js/script.js"></script>
+
 </body>
 </html>
